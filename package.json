@@ -1,8 +1,7 @@
 {
-  "name": "@stencil/starter",
-  "private": true,
+  "name": "@rula/finder",
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "description": "Ryerson Library wayfinding web application",
   "files": [
     "dist/"
   ],
@@ -15,25 +14,39 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "^0.7.22",
-    "@stencil/router": "latest"
+    "@stencil/core": "^0.10.10",
+    "@stencil/router": "^0.2.5",
+    "@types/lodash-es": "^4.17.1",
+    "lodash-es": "^4.17.10",
+    "pwa-helpers": "^0.8.3",
+    "redux": "^4.0.0",
+    "redux-logic": "^0.15.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@material/drawer": "^0.37.1",
+    "@material/elevation": "^0.36.1",
+    "@material/ripple": "^0.37.1",
+    "@material/select": "^0.37.1",
+    "@material/tabs": "^0.37.1",
+    "@material/textfield": "^0.37.1",
+    "@rula/web-components": "^1.1.6",
     "@stencil/dev-server": "latest",
+    "@stencil/redux": "0.0.4",
+    "@stencil/sass": "0.0.5",
     "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "@types/jest": "^23.3.1",
+    "@types/material-components-web": "^0.35.0",
+    "jest": "^23.4.1",
+    "material-components-web": "^0.37.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+    "url": "git+https://github.com/ryersonlibrary/rula-finder"
   },
-  "author": "Ionic Team",
+  "author": "Ryerson University Library and Archives",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://library.ryerson.ca",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"

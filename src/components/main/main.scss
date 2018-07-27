@@ -1,0 +1,32 @@
+$mdc-theme-primary: #004c9b;
+$mdc-theme-secondary: #ffdc00;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #000000;
+
+@import "material-components-web/material-components-web";
+
+
+.mdc-top-app-bar {
+  user-select: none;
+  z-index: 4;
+
+  &__section--align-start {
+    flex: 1;
+  }
+
+  &__section--align-middle {
+    flex: 2;
+    justify-content: center;
+    order: 0;
+  }
+}
+
+
+.main-content {
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+
+  stencil-router > div { display: inline; }
+}

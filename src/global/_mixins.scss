@@ -1,0 +1,7 @@
+@mixin display-absolute($border: 0) {
+  position: absolute;
+  top: $border;
+  left: $border;
+  bottom: $border;
+  right: $border;
+}

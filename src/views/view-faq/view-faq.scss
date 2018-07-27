@@ -1,0 +1,148 @@
+@import '_variables';
+@import '_mixins';
+
+@import '@material/layout-grid/mixins';
+
+view-faq {
+  display: block;
+	padding-top: $ui-fixed-increment * 1.5;
+  padding-bottom: $ui-fixed-increment / 2;
+  
+  *:focus {
+    outline: none;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: calc(100vh - $ui-fixed-increment);
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (max-width: $grid-medium-bp - 1) {
+      width: calc(100% - (#{$grid-phone-gutter} * 2)); 
+  
+      /* 2 columns */
+      rula-expandable-card {
+        margin-bottom: $grid-tablet-margin;
+        width: 100%;
+      }
+  
+      rula-expandable-card:nth-child(n) {
+        margin-right: 0;
+      }
+  
+      rula-expandable-card:nth-child(-n + 1) {
+        margin-top: 0;
+      }
+    }
+    
+    @media (min-width: $grid-medium-bp) and (max-width: $grid-large-bp - 1) {
+      width: $grid-medium-bp - ($ui-fixed-increment * 2);
+  
+      /* 2 columns */
+      rula-expandable-card {
+        margin-bottom: $grid-tablet-margin;
+        width: calc((100% - #{$grid-tablet-margin}) / 2);
+      }
+  
+      rula-expandable-card:nth-child(2n + 2) {
+        margin-right: 0;
+      }
+  
+      rula-expandable-card:nth-child(-n + 2) {
+        margin-top: 0;
+      }
+    }
+    
+    @media (min-width: $grid-large-bp) and (max-width: $grid-xlarge-bp - 1) {
+      width: $grid-large-bp - ($ui-fixed-increment * 4);
+  
+      /* 3 columns */
+      rula-expandable-card {
+        margin-bottom: $grid-desktop-margin;
+        width: calc((100% - #{$grid-desktop-margin} * 2) / 3);
+      }
+  
+      rula-expandable-card:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+      rula-expandable-card:nth-child(-n + 3) {
+        margin-top: 0;
+      }
+    }
+    
+    @media (min-width: $grid-xlarge-bp) {
+      width: $grid-xlarge-bp - ($ui-fixed-increment * 8);
+  
+      /* 4 columns */
+      rula-expandable-card {
+        margin-bottom: $grid-desktop-margin;
+        width: calc((100% - #{$grid-desktop-margin} * 3) / 4);
+      }
+  
+      rula-expandable-card:nth-child(4n + 4) {
+        margin-right: 0;
+      }
+  
+      rula-expandable-card:nth-child(-n + 4) {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  rula-expandable-card {
+    box-sizing: border-box;
+    padding: 24px;
+    height: 256px;
+
+    &:focus .faq-question {
+      text-decoration: underline;
+    }
+
+    [main-content] {
+      align-items: flex-end;
+      background-color: transparent;
+      color: #000;
+      cursor: pointer;
+      display: flex;
+      font-size: 24px;
+      justify-content: flex-start;
+      padding: 16px;
+      border-radius: 0;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    
+      svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    
+      span { z-index: 2; }
+    
+      .textProtection {
+        background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 95%);
+        @include display-absolute();
+      }
+    }
+
+    [extra-content] {
+      font-size: 18px;
+      padding: 24px;
+      background-color: transparent;
+      box-sizing: border-box;
+    }
+  }
+  
+  rula-expandable-card:hover, rula-expandable-card[open] {
+    paper-icon-button.open-button {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$mdc-theme-primary: #002d72;
+$mdc-theme--primary-light: #4355a1; 
+$mdc-theme--primary-dark: #000346;
+$mdc-theme-secondary: #ffdc00;
+$mdc-theme--secondary-light: #ffff53;
+$mdc-theme--secondary-dark: #c7ab00;
+$mdc-theme-background: #ffffff;
+$mdc-theme-text-primary-on-primary: #ffffff;
+$mdc-theme-text-primary-on-secondary: #000000;
+
+// High contrast colours
+$hot-pink:			#CC66CA;
+$charcoal:			#333333;
+$night-sky:			#0D3D56;
+$bright-sky:		#009DF0;
+$sour-apple:		#1BCC4A;
+$goldenrod:			#F2DA2F;
+$coral:					#FA9D1D;
+$ruby:					#C02F1D;
+
+$ui-fixed-increment: 64px;
+
+/* GRID */
+
+$grid-desktop-columns: 12;
+$grid-desktop-gutter: 24px;
+$grid-desktop-margin: 24px;
+
+$grid-tablet-columns: 8;
+$grid-tablet-gutter: 16px;
+$grid-tablet-margin: 16px;
+
+$grid-phone-columns: 4;
+$grid-phone-gutter: $grid-tablet-gutter;
+$grid-phone-margin: $grid-tablet-margin;
+
+
+$grid-mobile-bp: 480px;
+$grid-medium-bp: 840px;
+$grid-large-bp: 1280px;
+$grid-xlarge-bp: 1850px;
+
+$grid-cell-default-columns: $grid-phone-columns;
+$grid-max-columns: $grid-desktop-columns;

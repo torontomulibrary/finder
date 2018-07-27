@@ -1,0 +1,18 @@
+rula-map-nav {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: space-around;
+  
+  .mdc-select {
+    margin-bottom: 8px;
+    margin-left: 16px;
+    font-size: 1rem;
+    min-width: 256px;
+  }
+}
